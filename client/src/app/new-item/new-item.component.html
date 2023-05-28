@@ -1,0 +1,91 @@
+<main>
+    <form [formGroup]="newItem" (ngSubmit)="processForm()">
+    <div>
+      <label class="form-label" style="font-size: 16pt;"><u>New Entry</u></label>
+    </div>
+    <br>
+    <div class="mb-3">
+      <label for="payment" class="form-label">Payment method:</label><br>
+        <input type="radio" class="form-label" value="dbs-paywave" formControlName="payment">
+        <label>&nbsp;DBS Live Fresh - Paywave&nbsp;&nbsp; </label>
+        <input type="radio" class="form-label" value="dbs-online" formControlName="payment">
+        <label>&nbsp;DBS Live Fresh - Online&nbsp;&nbsp; </label>
+        <input type="radio" class="form-label" value="citi" formControlName="payment">
+        <label>&nbsp;HSBC Advance&nbsp;&nbsp;</label>
+        <input type="radio" class="form-label" value="cash" formControlName="payment">
+        <label>&nbsp;Cash&nbsp;&nbsp;</label>
+        <input type="radio" class="form-label" value="paynow" formControlName="payment">
+        <label>&nbsp;PayNow&nbsp;&nbsp;</label>
+    </div>
+    <div class="mb-3">
+      <label for="date" class="form-label">Date:</label>
+      <input type="date" class="form-control" id="date" formControlName="entry_date">
+    </div>
+    <div class="mb-3">
+      <label for="location" class="form-label">Location:</label>
+      <input type="location" class="form-control" id="location" formControlName="location">
+    </div>
+    <div class="mb-3">
+      <table>
+      <thead>
+        <th style="width:32%">Item</th>
+        <th style="width:22%">Category</th>
+        <th>Quantity</th>
+        <th style="width:12%">Price</th>
+        <th style="width:18%">Owner</th>
+        
+      </thead>
+      <tbody formArrayName="items">
+      <tr *ngFor = "let x of itemsArray.controls;let idx = index" [formGroupName] = "idx">
+        <td><input type="text" class="form-control" id="item" formControlName="item_name"></td>
+        <td><select name="city" id="city" class="form-control" formControlName="item_category">
+          <option value="Food">Food 🍔</option>
+          <option value="Social">Social 🧑🏻‍🤝‍🧑🏻</option>
+          <option value="Apparel">Apparel 👖</option>
+          <option value="Groceries">Groceries 🥦</option>
+          <option value="Health">Health 🎁</option>
+          <option value="Entertainment">Entertainment 🎥</option>
+          <option value="Gift">Gift 🎁</option>
+          <option value="Others">Others 👾</option>
+
+      </select></td>
+        <td><input type="number" class="form-control" id="quantity" formControlName="item_quantity"></td>
+        <td><input type="text" class="form-control" id="quantity" formControlName="item_price"></td>
+        <td><input type="text" class="form-control" id="owner" formControlName="item_owner"></td>
+        <td><button type="button" (click)="onDelete(idx)" class="btn btn-primary" >X</button></td>
+      </tr>
+    </tbody>
+    <br>
+      <button type="button" class="btn btn-warning" (click)="onAdd()">Add</button>
+
+    </table>      
+      <!-- <div id="item" class="form-text">We'll never share your email with anyone else.</div> -->
+    </div>
+
+    <hr>
+    <button type="submit" class="btn btn-primary" [disabled]="newItem.invalid">Submit Entry</button>
+    <br>
+
+    <div *ngIf="this.newEntry1 != null">
+      <hr>
+      <br>
+      <div>
+        <label class="form-label" style="font-size: 16pt;"><u>Request for Payment</u></label>
+      </div>
+      <br>
+      <table>
+        <tr *ngFor="let x of newEntry1.items; let idx=index"> 
+          <p *ngIf="x.item_owner != 'Me'">
+            <button type="button" class="btn btn-warning" (click)="sendTelegram(idx)">Send request to {{x.item_owner}}</button>
+            
+          </p>
+          
+        </tr>
+      </table>
+    </div>
+    
+  </form>
+
+  
+  
+</main>

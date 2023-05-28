@@ -1,0 +1,66 @@
+<main>
+  <div class="container-fluid">
+  <form [formGroup]="newEntry" (ngSubmit)="processForm()">
+    <div>
+      <label class="form-label" style="font-size: 16pt;"><u>Personal Info and Goals</u></label>
+    </div>
+    <br>
+    <div class="mb-3">
+        <label for="payment" class="form-label">Age:</label><br>
+        <input type="number" class="form-control" id="age" formControlName="age"><br>
+        <label for="payment" class="form-label">Gender:</label><br>
+          <input type="radio" class="form-label" value="male" formControlName="gender">
+          <label>&nbsp;Male&nbsp;&nbsp; </label>
+          <input type="radio" class="form-label" value="female" formControlName="gender">
+          <label>&nbsp;Female&nbsp; </label><br><br>
+          <label for="payment" class="form-label">Weight (kg):</label><br>
+          <input type="number" class="form-control" id="weight" formControlName="weight"><br>
+          <label for="payment" class="form-label">Weight Goal (kg):</label><br>
+          <input type="number" class="form-control" id="weight_goal" formControlName="weight_goal"><br>
+          <label for="payment" class="form-label">Time Period (weeks):</label><br>
+          <input type="number" class="form-control" id="period_weeks" formControlName="period_weeks"><br>   
+          <label for="payment" class="form-label">Height (cm):</label><br>
+        <input type="number" class="form-control" id="height" formControlName="height"><br>
+        <label for="diet" class="form-label">Diet:</label><br>
+        <select name="diet" id="diet" class="form-control" formControlName="diet">
+            <option value="No Preference">No Preference</option>
+            <option value="Keto">Keto</option>
+            <option value="Gluten-free">Gluten-free</option>
+            <option value="Paleolithic">Paleolithic</option>
+            <option value="Pescatarian">Pescatarian</option>
+            <option value="Vegan">Vegan</option>
+            <option value="Vegetarian">Vegetarian</option>
+        </select><br>
+        <label for="payment" class="form-label">Workout per Week:</label><br>
+        <input type="number" class="form-control" id="workout_per_wk" formControlName="workout_per_wk"><br>
+        <label for="payment" class="form-label">Workout Duration (Minutes):</label><br>
+        <input type="number" class="form-control" id="duration" formControlName="duration"><br>
+        <button type="submit" class="btn btn-warning" [disabled]="newEntry.invalid">Update</button><br>
+      </div>
+
+
+      <button type="button" class="btn btn-primary" (click)="getRecipe()" [disabled]="newEntry.invalid">Get Recipes</button>&nbsp;
+      <button type="button" class="btn btn-primary" (click)="getWorkout()" [disabled]="newEntry.invalid">Get Workout</button>
+
+    </form>
+  </div>
+
+    <div class="response-text" *ngIf="button == true">
+      <ngx-typed-js *ngIf="response != null; else waitingText"
+        [strings]="[response]"
+        [loop]=false
+        [typeSpeed]="2">
+        
+
+      
+      <h3 class="typing"></h3>
+      </ngx-typed-js>
+
+
+      <ng-template #waitingText>
+        Loading...
+      </ng-template>
+
+    </div>
+</main>
+
