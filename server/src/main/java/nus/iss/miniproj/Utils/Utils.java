@@ -1,4 +1,4 @@
-package nus.iss.ws22prac01.Utils;
+package nus.iss.miniproj.Utils;
 
 import java.io.StringReader;
 
@@ -7,7 +7,7 @@ import org.bson.Document;
 import jakarta.json.Json;
 import jakarta.json.JsonObject;
 import jakarta.json.JsonReader;
-import nus.iss.ws22prac01.model.PersonalData;
+import nus.iss.miniproj.model.PersonalData;
 
 public class Utils {
 

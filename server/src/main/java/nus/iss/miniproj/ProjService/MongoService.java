@@ -1,13 +1,13 @@
-package nus.iss.ws22prac01.ProjService;
+package nus.iss.miniproj.ProjService;
 
 import org.bson.Document;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Service;
 
-import nus.iss.ws22prac01.ProjRepo.MongoRepo;
-import nus.iss.ws22prac01.Utils.Utils;
-import nus.iss.ws22prac01.model.PersonalData;
+import nus.iss.miniproj.ProjRepo.MongoRepo;
+import nus.iss.miniproj.Utils.Utils;
+import nus.iss.miniproj.model.PersonalData;
 
 @Service
 public class MongoService {

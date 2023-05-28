@@ -1,4 +1,4 @@
-package nus.iss.ws22prac01.ProjRepo;
+package nus.iss.miniproj.ProjRepo;
 
 
 import java.util.List;
@@ -15,8 +15,8 @@ import com.mongodb.client.result.UpdateResult;
 
 import jakarta.json.JsonObject;
 import jakarta.transaction.Transactional;
-import nus.iss.ws22prac01.Utils.Utils;
-import nus.iss.ws22prac01.model.PersonalData;
+import nus.iss.miniproj.Utils.Utils;
+import nus.iss.miniproj.model.PersonalData;
 
 @Repository
 @Transactional

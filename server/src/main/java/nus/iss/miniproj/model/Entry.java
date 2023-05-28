@@ -1,4 +1,4 @@
-package nus.iss.ws22prac01.model;
+package nus.iss.miniproj.model;
 
 import java.sql.Date;
 import java.util.List;

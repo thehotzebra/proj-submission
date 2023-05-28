@@ -1,4 +1,4 @@
-package nus.iss.ws22prac01.controller;
+package nus.iss.miniproj.controller;
 
 import java.util.List;
 
@@ -19,15 +19,15 @@ import org.springframework.web.bind.annotation.RestController;
 import jakarta.json.Json;
 import jakarta.json.JsonArrayBuilder;
 import jakarta.json.JsonObject;
-import nus.iss.ws22prac01.model.Items;
-import nus.iss.ws22prac01.model.PersonalData;
-import nus.iss.ws22prac01.model.Summary;
-import nus.iss.ws22prac01.model.View1;
-import nus.iss.ws22prac01.ProjRepo.MongoRepo;
-import nus.iss.ws22prac01.ProjRepo.ProjRepo;
-import nus.iss.ws22prac01.ProjService.MongoService;
-import nus.iss.ws22prac01.Utils.Utils;
-import nus.iss.ws22prac01.model.Entry;
+import nus.iss.miniproj.ProjRepo.MongoRepo;
+import nus.iss.miniproj.ProjRepo.ProjRepo;
+import nus.iss.miniproj.ProjService.MongoService;
+import nus.iss.miniproj.Utils.Utils;
+import nus.iss.miniproj.model.Entry;
+import nus.iss.miniproj.model.Items;
+import nus.iss.miniproj.model.PersonalData;
+import nus.iss.miniproj.model.Summary;
+import nus.iss.miniproj.model.View1;
 
 @RestController
 @RequestMapping("/api")

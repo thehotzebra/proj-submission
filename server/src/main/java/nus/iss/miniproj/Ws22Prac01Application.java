@@ -1,4 +1,4 @@
-package nus.iss.ws22prac01;
+package nus.iss.miniproj;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

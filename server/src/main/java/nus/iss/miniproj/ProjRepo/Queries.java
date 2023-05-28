@@ -1,4 +1,4 @@
-package nus.iss.ws22prac01.ProjRepo;
+package nus.iss.miniproj.ProjRepo;
 
 public class Queries {
     

@@ -1,4 +1,4 @@
-package nus.iss.ws22prac01.model;
+package nus.iss.miniproj.model;
 
 import org.bson.Document;
 

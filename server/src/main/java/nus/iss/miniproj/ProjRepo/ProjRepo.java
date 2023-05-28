@@ -1,6 +1,6 @@
-package nus.iss.ws22prac01.ProjRepo;
+package nus.iss.miniproj.ProjRepo;
 
-import static nus.iss.ws22prac01.ProjRepo.Queries.*;
+import static nus.iss.miniproj.ProjRepo.Queries.*;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -10,10 +10,10 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.support.rowset.SqlRowSet;
 import org.springframework.stereotype.Repository;
 
-import nus.iss.ws22prac01.model.Items;
-import nus.iss.ws22prac01.model.Summary;
-import nus.iss.ws22prac01.model.View1;
-import nus.iss.ws22prac01.model.Entry;
+import nus.iss.miniproj.model.Entry;
+import nus.iss.miniproj.model.Items;
+import nus.iss.miniproj.model.Summary;
+import nus.iss.miniproj.model.View1;
 
 @Repository
 public class ProjRepo {

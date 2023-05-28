@@ -1,4 +1,4 @@
-package nus.iss.ws22prac01.Configs;
+package nus.iss.miniproj.Configs;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
